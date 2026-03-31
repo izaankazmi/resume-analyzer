@@ -1,0 +1,920 @@
+# =============================================================================
+# skills_list.txt
+# =============================================================================
+# One skill per line. Lines starting with # are ignored.
+# All matching is case-insensitive.
+# Covers 11 job families for broad workforce applicability.
+# =============================================================================
+
+
+# =============================================================================
+# 1. INFORMATION TECHNOLOGY
+# =============================================================================
+
+# Programming Languages
+python
+javascript
+typescript
+java
+c
+c++
+c#
+ruby
+php
+swift
+kotlin
+go
+rust
+scala
+r
+matlab
+perl
+bash
+shell
+powershell
+
+# Web Frameworks & Libraries
+django
+flask
+fastapi
+express
+react
+angular
+vue
+next.js
+nuxt.js
+svelte
+spring
+spring boot
+laravel
+rails
+asp.net
+
+# Databases
+postgresql
+mysql
+sqlite
+mongodb
+redis
+elasticsearch
+cassandra
+dynamodb
+oracle
+sql server
+firebase
+supabase
+mariadb
+
+# Cloud Platforms
+aws
+azure
+gcp
+google cloud
+heroku
+digitalocean
+cloudflare
+vercel
+netlify
+
+# DevOps & Infrastructure
+docker
+kubernetes
+terraform
+ansible
+jenkins
+github actions
+gitlab ci
+circleci
+nginx
+apache
+linux
+ubuntu
+debian
+
+# Data Science & ML
+machine learning
+deep learning
+natural language processing
+nlp
+computer vision
+tensorflow
+pytorch
+keras
+scikit-learn
+pandas
+numpy
+scipy
+matplotlib
+seaborn
+plotly
+hugging face
+transformers
+openai
+langchain
+llm
+
+# Data Engineering
+apache spark
+hadoop
+kafka
+airflow
+dbt
+snowflake
+bigquery
+redshift
+databricks
+etl
+data pipeline
+data warehouse
+
+# APIs & Protocols
+rest api
+graphql
+grpc
+websocket
+oauth
+jwt
+soap
+json
+xml
+yaml
+
+# Version Control & Collaboration
+git
+github
+gitlab
+bitbucket
+jira
+confluence
+trello
+notion
+slack
+
+# Testing
+pytest
+unittest
+jest
+selenium
+cypress
+postman
+junit
+mocha
+chai
+
+# Mobile Development
+react native
+flutter
+android
+ios
+xcode
+swift ui
+
+# Security
+cybersecurity
+penetration testing
+ethical hacking
+owasp
+ssl
+tls
+encryption
+firewall
+vpn
+
+# IT Methodologies
+agile
+scrum
+kanban
+ci/cd
+tdd
+bdd
+microservices
+system design
+object oriented programming
+oop
+design patterns
+code review
+technical writing
+
+
+# =============================================================================
+# 2. ACCOUNTANCY & FINANCE
+# =============================================================================
+
+# Accounting Skills
+bookkeeping
+double entry accounting
+accounts payable
+accounts receivable
+bank reconciliation
+general ledger
+trial balance
+financial statements
+balance sheet
+income statement
+cash flow statement
+fixed assets
+depreciation
+accruals
+prepayments
+payroll
+tax compliance
+vat
+corporate tax
+income tax
+tax returns
+auditing
+internal audit
+external audit
+financial reporting
+ifrs
+gaap
+management accounts
+cost accounting
+budgeting
+forecasting
+variance analysis
+financial analysis
+profit and loss
+month end close
+year end close
+statutory accounts
+
+# Finance Skills
+financial modelling
+valuation
+discounted cash flow
+dcf
+mergers and acquisitions
+m&a
+private equity
+venture capital
+investment banking
+portfolio management
+risk management
+credit analysis
+equity research
+fixed income
+derivatives
+hedging
+forex
+foreign exchange
+treasury management
+capital markets
+asset management
+fund accounting
+financial planning
+fp&a
+working capital management
+due diligence
+financial controls
+
+# Accounting Software
+quickbooks
+xero
+sage
+myob
+netsuite
+sap
+oracle financials
+workday
+excel
+advanced excel
+pivot tables
+vlookup
+power query
+power bi
+tableau
+
+
+# =============================================================================
+# 3. MEDIA & COMMUNICATIONS
+# =============================================================================
+
+# Journalism & Writing
+journalism
+news writing
+feature writing
+copywriting
+content writing
+editorial
+proofreading
+fact checking
+investigative journalism
+broadcast journalism
+photojournalism
+scriptwriting
+speechwriting
+press releases
+media relations
+public relations
+pr
+crisis communications
+corporate communications
+internal communications
+
+# Digital Media
+social media management
+social media marketing
+content creation
+content strategy
+blogging
+podcasting
+video production
+video editing
+photography
+photo editing
+graphic design
+adobe creative suite
+photoshop
+illustrator
+indesign
+premiere pro
+after effects
+final cut pro
+davinci resolve
+canva
+
+# Broadcasting
+television production
+radio production
+live streaming
+broadcasting
+studio production
+news production
+documentary production
+film production
+animation
+motion graphics
+
+# Publishing
+publishing
+editing
+manuscript editing
+digital publishing
+ebook publishing
+magazine publishing
+newspaper publishing
+
+
+# =============================================================================
+# 4. GOVERNMENT & PUBLIC SECTOR
+# =============================================================================
+
+policy analysis
+policy development
+policy writing
+public administration
+public sector management
+regulatory compliance
+legislation
+governance
+stakeholder engagement
+community engagement
+public consultation
+grant writing
+grant management
+program management
+project management
+risk assessment
+procurement
+public procurement
+tender management
+contract management
+freedom of information
+foi
+data protection
+gdpr
+government relations
+parliamentary affairs
+local government
+central government
+council management
+budget management
+performance management
+strategic planning
+change management
+cabinet office
+civil service
+public services
+social policy
+economic policy
+environmental policy
+planning permission
+urban planning
+town planning
+land use planning
+
+
+# =============================================================================
+# 5. MARKETING & ADVERTISING
+# =============================================================================
+
+# Digital Marketing
+digital marketing
+search engine optimisation
+seo
+search engine marketing
+sem
+pay per click
+ppc
+google ads
+facebook ads
+instagram ads
+linkedin ads
+tiktok ads
+programmatic advertising
+display advertising
+affiliate marketing
+email marketing
+marketing automation
+hubspot
+mailchimp
+klaviyo
+marketo
+salesforce marketing cloud
+
+# Analytics & Strategy
+google analytics
+google tag manager
+marketing analytics
+conversion rate optimisation
+cro
+a/b testing
+customer segmentation
+market research
+competitor analysis
+brand strategy
+brand management
+brand identity
+campaign management
+campaign planning
+go to market strategy
+product marketing
+growth marketing
+performance marketing
+roi analysis
+customer acquisition
+customer retention
+customer lifetime value
+clv
+
+# Creative & Content
+creative direction
+art direction
+copywriting
+content marketing
+content strategy
+social media strategy
+influencer marketing
+community management
+event marketing
+experiential marketing
+trade show management
+
+
+# =============================================================================
+# 6. HEALTHCARE & MEDICINE
+# =============================================================================
+
+# Clinical Skills
+patient care
+patient assessment
+clinical assessment
+diagnosis
+treatment planning
+medication administration
+wound care
+phlebotomy
+cannulation
+ecg interpretation
+vital signs
+triage
+emergency care
+intensive care
+critical care
+surgical assistance
+theatre nursing
+midwifery
+obstetrics
+paediatrics
+geriatrics
+oncology
+cardiology
+neurology
+orthopaedics
+radiology
+pathology
+pharmacy
+pharmacology
+physiotherapy
+occupational therapy
+speech therapy
+mental health
+psychiatric assessment
+counselling
+cognitive behavioural therapy
+cbt
+
+# Healthcare Administration
+healthcare management
+clinical governance
+care planning
+discharge planning
+electronic health records
+ehr
+emr
+nhs systems
+infection control
+health and safety
+cqc compliance
+safeguarding
+medical coding
+icd coding
+clinical audit
+patient safety
+quality improvement
+
+# Research & Science
+clinical research
+clinical trials
+research methodology
+evidence based practice
+systematic review
+medical writing
+biostatistics
+epidemiology
+public health
+health promotion
+
+
+# =============================================================================
+# 7. LEGAL & COMPLIANCE
+# =============================================================================
+
+# Legal Practice
+legal research
+legal writing
+contract drafting
+contract review
+contract negotiation
+litigation
+dispute resolution
+arbitration
+mediation
+conveyancing
+corporate law
+commercial law
+employment law
+family law
+criminal law
+immigration law
+intellectual property
+ip law
+data protection law
+gdpr compliance
+regulatory compliance
+financial regulation
+aml
+anti money laundering
+kyc
+know your customer
+company secretarial
+due diligence
+legal advice
+case management
+court proceedings
+legal aid
+barrister
+solicitor
+paralegal
+
+# Compliance & Risk
+compliance management
+risk management
+operational risk
+regulatory reporting
+internal controls
+audit
+fraud prevention
+whistleblowing
+ethics and compliance
+iso compliance
+iso 27001
+iso 9001
+
+
+# =============================================================================
+# 8. ENGINEERING (NON-SOFTWARE)
+# =============================================================================
+
+# Civil & Structural
+civil engineering
+structural engineering
+geotechnical engineering
+highway engineering
+bridge design
+foundation design
+autocad
+revit
+civil 3d
+staad pro
+etabs
+bim
+building information modelling
+quantity surveying
+cost estimation
+construction management
+site management
+project engineering
+structural analysis
+load calculations
+drainage design
+flood risk assessment
+
+# Mechanical & Electrical
+mechanical engineering
+electrical engineering
+hvac
+plumbing
+piping design
+pressure vessel design
+thermodynamics
+fluid mechanics
+finite element analysis
+fea
+cad design
+solidworks
+catia
+ansys
+matlab
+plc programming
+instrumentation
+control systems
+automation
+robotics
+industrial engineering
+manufacturing engineering
+lean manufacturing
+six sigma
+quality engineering
+ndt
+non destructive testing
+
+# Chemical & Process
+chemical engineering
+process engineering
+process design
+process simulation
+aspen plus
+plant design
+safety engineering
+hazop
+process safety
+environmental engineering
+oil and gas
+refinery
+petrochemicals
+
+# Aerospace & Defence
+aerospace engineering
+aircraft design
+propulsion
+aerodynamics
+avionics
+defence engineering
+
+
+# =============================================================================
+# 9. EDUCATION & TEACHING
+# =============================================================================
+
+lesson planning
+curriculum development
+curriculum design
+teaching
+classroom management
+behaviour management
+differentiation
+assessment and feedback
+formative assessment
+summative assessment
+marking
+tutoring
+special educational needs
+sen
+senco
+inclusion
+early years education
+primary education
+secondary education
+further education
+higher education
+university lecturing
+academic writing
+research supervision
+e-learning
+online teaching
+virtual classroom
+learning management systems
+lms
+moodle
+canvas
+blackboard
+google classroom
+educational technology
+edtech
+student engagement
+parent communication
+report writing
+safeguarding
+pastoral care
+personal tutor
+admissions
+career guidance
+counselling
+training and development
+corporate training
+instructional design
+training delivery
+facilitation
+coaching
+mentoring
+
+
+# =============================================================================
+# 10. HUMAN RESOURCES & RECRUITMENT
+# =============================================================================
+
+# HR Generalist
+human resources
+hr management
+employee relations
+employee engagement
+hr policies
+hr compliance
+employment law
+disciplinary procedures
+grievance procedures
+performance management
+appraisals
+succession planning
+workforce planning
+organisational development
+change management
+culture development
+diversity and inclusion
+dei
+wellbeing
+benefits administration
+compensation and benefits
+payroll management
+onboarding
+offboarding
+hr systems
+hris
+workday
+sap hr
+bamboohr
+people management
+
+# Recruitment & Talent
+recruitment
+talent acquisition
+talent management
+headhunting
+executive search
+candidate sourcing
+linkedin recruiter
+applicant tracking systems
+ats
+job advertising
+interviewing
+competency based interviewing
+assessment centres
+employer branding
+graduate recruitment
+volume recruitment
+retained search
+agency recruitment
+in house recruitment
+
+# Learning & Development
+learning and development
+l&d
+training needs analysis
+training design
+training delivery
+e-learning development
+leadership development
+management development
+coaching
+mentoring
+
+
+# =============================================================================
+# 11. SALES & BUSINESS DEVELOPMENT
+# =============================================================================
+
+# Sales Skills
+sales
+b2b sales
+b2c sales
+inside sales
+field sales
+account management
+key account management
+new business development
+lead generation
+prospecting
+cold calling
+cold emailing
+pipeline management
+sales forecasting
+deal closing
+negotiation
+contract negotiation
+tender writing
+proposal writing
+bid writing
+upselling
+cross selling
+customer success
+account retention
+crm
+salesforce
+hubspot crm
+pipedrive
+zoho crm
+
+# Business Development
+business development
+partnership development
+strategic partnerships
+market entry
+market analysis
+competitive analysis
+business strategy
+commercial strategy
+revenue growth
+p&l management
+pricing strategy
+product development
+go to market
+client relationship management
+stakeholder management
+networking
+pitching
+presentation skills
+
+
+# =============================================================================
+# 12. UNIVERSAL CROSS-INDUSTRY SKILLS
+# =============================================================================
+
+microsoft office
+microsoft word
+microsoft excel
+microsoft powerpoint
+microsoft teams
+google workspace
+google docs
+google sheets
+google slides
+zoom
+project management
+strategic thinking
+problem solving
+critical thinking
+analytical thinking
+data analysis
+report writing
+presentation skills
+communication skills
+leadership
+team management
+people management
+stakeholder management
+budget management
+time management
+attention to detail
+organisation
+prioritisation
+multitasking
+decision making
+conflict resolution
+negotiation
+customer service
+client management
+account management
+relationship management
+business analysis
+process improvement
+quality assurance
+risk management
+compliance
+research
+planning
+forecasting
+strategy
+innovation
+entrepreneurship

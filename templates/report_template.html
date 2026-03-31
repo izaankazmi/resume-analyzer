@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Analysis Report — {{ candidate_name }}</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   Helvetica, Arial, sans-serif;
+      background: #f4f6f9;
+      color: #2c3e50;
+      padding: 32px 16px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    /* ── Header ── */
+    .header {
+      background: #2c3e50;
+      color: #ffffff;
+      padding: 36px 40px;
+    }
+    .header h1 { font-size: 24px; font-weight: 600; margin-bottom: 6px; }
+    .header p  { font-size: 14px; opacity: 0.75; }
+
+    /* ── Section wrapper ── */
+    .section {
+      padding: 32px 40px;
+      border-bottom: 1px solid #ecf0f1;
+    }
+    .section:last-child { border-bottom: none; }
+    .section-title {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #95a5a6;
+      margin-bottom: 20px;
+    }
+
+    /* ── Score card ── */
+    .score-card {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+    }
+    .score-circle {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: {{ score_color }};
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+    .score-circle .number { font-size: 28px; font-weight: 700; line-height: 1; }
+    .score-circle .pct    { font-size: 12px; opacity: 0.85; }
+    .score-info h2  { font-size: 20px; font-weight: 600; color: {{ score_color }}; }
+    .score-info p   { font-size: 14px; color: #7f8c8d; margin-top: 4px; }
+
+    /* ── Score breakdown bars ── */
+    .breakdown { margin-top: 8px; }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .bar-label { font-size: 13px; color: #7f8c8d; width: 130px; flex-shrink: 0; }
+    .bar-track {
+      flex: 1;
+      height: 8px;
+      background: #ecf0f1;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      background: {{ score_color }};
+    }
+    .bar-value { font-size: 13px; color: #2c3e50; width: 48px; text-align: right; }
+
+    /* ── Skills tags ── */
+    .tag-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .tag {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .tag-green  { background: #eafaf1; color: #1e8449; }
+    .tag-red    { background: #fdedec; color: #c0392b; }
+    .tag-blue   { background: #eaf4fd; color: #1a5276; }
+    .tag-gray   { background: #f2f3f4; color: #566573; }
+
+    /* ── Info rows ── */
+    .info-row {
+      display: flex;
+      gap: 8px;
+      padding: 10px 0;
+      border-bottom: 1px solid #f2f3f4;
+      font-size: 14px;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-label { color: #95a5a6; width: 160px; flex-shrink: 0; }
+    .info-value { color: #2c3e50; font-weight: 500; }
+
+    /* ── Recommendations ── */
+    .rec-list { list-style: none; }
+    .rec-list li {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #f2f3f4;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .rec-list li:last-child { border-bottom: none; }
+    .rec-number {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #2c3e50;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── Empty state ── */
+    .empty { font-size: 13px; color: #bdc3c7; font-style: italic; }
+
+    /* ── Footer ── */
+    .footer {
+      background: #f8f9fa;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 12px;
+      color: #bdc3c7;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Resume Analysis Report</h1>
+    <p>Prepared for {{ candidate_name }} &nbsp;·&nbsp; {{ candidate_email }}</p>
+    <p>Role applied for: <strong>{{ job_title }}</strong> &nbsp;·&nbsp; {{ report_date }}</p>
+  </div>
+
+  <!-- Match Score -->
+  <div class="section">
+    <div class="section-title">Overall Match Score</div>
+    <div class="score-card">
+      <div class="score-circle">
+        <span class="number">{{ composite_score | round(0) | int }}</span>
+        <span class="pct">/ 100</span>
+      </div>
+      <div class="score-info">
+        <h2>{{ match_label }}</h2>
+        <p>Your resume was analysed against the job description using
+           keyword matching, semantic similarity, and skills overlap.</p>
+      </div>
+    </div>
+
+    <!-- Score breakdown bars -->
+    <div class="breakdown">
+      <div class="bar-row">
+        <span class="bar-label">Keyword match</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: {{ tfidf_score }}%"></div>
+        </div>
+        <span class="bar-value">{{ tfidf_score | round(1) }}%</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Semantic similarity</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: {{ semantic_score }}%"></div>
+        </div>
+        <span class="bar-value">{{ semantic_score | round(1) }}%</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Skills overlap</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: {{ skills_score }}%"></div>
+        </div>
+        <span class="bar-value">{{ skills_score | round(1) }}%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills Analysis -->
+  <div class="section">
+    <div class="section-title">Skills Analysis</div>
+
+    <p style="font-size:13px; color:#7f8c8d; margin-bottom:12px;">
+      {{ total_skills }} skills detected on your resume.
+    </p>
+
+    {% if matched_skills %}
+    <p style="font-size:13px; font-weight:600; margin-bottom:8px;">
+      Matched skills ({{ matched_skills | length }})
+    </p>
+    <div class="tag-group">
+      {% for skill in matched_skills %}
+        <span class="tag tag-green">{{ skill }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if missing_skills %}
+    <p style="font-size:13px; font-weight:600; margin: 20px 0 8px;">
+      Missing skills — required by job description ({{ missing_skills | length }})
+    </p>
+    <div class="tag-group">
+      {% for skill in missing_skills %}
+        <span class="tag tag-red">{{ skill }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if extra_skills %}
+    <p style="font-size:13px; font-weight:600; margin: 20px 0 8px;">
+      Additional skills on your resume ({{ extra_skills | length }})
+    </p>
+    <div class="tag-group">
+      {% for skill in extra_skills %}
+        <span class="tag tag-blue">{{ skill }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if not matched_skills and not missing_skills %}
+      <p class="empty">No skills data available.</p>
+    {% endif %}
+  </div>
+
+  <!-- Work Experience -->
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+
+    <div class="info-row">
+      <span class="info-label">Total experience</span>
+      <span class="info-value">{{ total_experience }} years</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Experience level</span>
+      <span class="info-value">{{ experience_level }}</span>
+    </div>
+
+    {% if job_titles %}
+      <p style="font-size:13px; font-weight:600; margin: 20px 0 8px;">
+        Roles detected
+      </p>
+      {% for entry in job_titles %}
+        <div class="info-row">
+          <span class="info-label">{{ entry.company }}</span>
+          <span class="info-value">{{ entry.title }}</span>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p class="empty" style="margin-top:12px;">
+        No job titles detected.
+      </p>
+    {% endif %}
+  </div>
+
+  <!-- Education -->
+  <div class="section">
+    <div class="section-title">Education</div>
+
+    <div class="info-row">
+      <span class="info-label">Highest degree</span>
+      <span class="info-value">{{ highest_degree or "Not detected" }}</span>
+    </div>
+
+    {% if education_entries %}
+      {% for entry in education_entries %}
+        <div class="info-row">
+          <span class="info-label">{{ entry.degree }}</span>
+          <span class="info-value">
+            {{ entry.field }}
+            {% if entry.institution != "Not detected" %}
+              — {{ entry.institution }}
+            {% endif %}
+            {% if entry.year != "Not detected" %}
+              ({{ entry.year }})
+            {% endif %}
+          </span>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p class="empty" style="margin-top:12px;">
+        No education entries detected.
+      </p>
+    {% endif %}
+  </div>
+
+  <!-- Recommendations -->
+  <div class="section">
+    <div class="section-title">Recommendations</div>
+
+    {% if recommendations %}
+      <ul class="rec-list">
+        {% for rec in recommendations %}
+          <li>
+            <span class="rec-number">{{ loop.index }}</span>
+            <span>{{ rec }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="empty">No recommendations generated.</p>
+    {% endif %}
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    Generated by Resume Analyzer &nbsp;·&nbsp; {{ report_date }}
+  </div>
+
+</div>
+</body>
+</html>

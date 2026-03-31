@@ -1,0 +1,135 @@
+# =============================================================================
+# Resume Analyzer — Python Dependency Manifest
+# =============================================================================
+# Python version : 3.10.x  (3.10.11 recommended)
+# Tested against : CPython 3.10 on Ubuntu 22.04 / macOS 13+
+# Last audited   : 2025-Q1
+#
+# System dependencies (install BEFORE pip install -r requirements.txt):
+#
+#   Ubuntu / Debian:
+#     sudo apt-get install -y \
+#       build-essential \
+#       python3-dev \
+#       libmupdf-dev \
+#       libfreetype6-dev \
+#       libharfbuzz-dev \
+#       libssl-dev \
+#       libffi-dev \
+#       git
+#
+#   macOS (Homebrew):
+#     brew install mupdf freetype harfbuzz
+#
+#   Windows:
+#     PyMuPDF ships pre-built wheels on Windows — no extra steps needed.
+#     Use the official Python 3.10 installer from python.org.
+#
+# Setup instructions:
+#   python3.10 -m venv .venv
+#   source .venv/bin/activate
+#   pip install --upgrade pip==24.1.2
+#   pip install -r requirements.txt
+#   python -m spacy download en_core_web_sm
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# 1. Document Parsing
+# -----------------------------------------------------------------------------
+
+PyMuPDF==1.24.5
+python-docx==1.1.2
+
+
+# -----------------------------------------------------------------------------
+# 2. NLP
+# -----------------------------------------------------------------------------
+
+spacy==3.7.5
+thinc==8.2.5
+srsly==2.4.8
+catalogue==2.0.10
+wasabi==1.1.3
+murmurhash==1.0.10
+cymem==2.0.8
+preshed==3.0.9
+blis==0.7.11
+langcodes==3.4.0
+
+
+# -----------------------------------------------------------------------------
+# 3. ML
+# -----------------------------------------------------------------------------
+
+scikit-learn==1.5.1
+numpy==1.26.4
+scipy==1.13.1
+joblib==1.4.2
+threadpoolctl==3.5.0
+
+sentence-transformers==3.0.1
+torch==2.3.1
+transformers==4.41.2
+huggingface-hub==0.23.4
+tokenizers==0.19.1
+safetensors==0.4.3
+tqdm==4.66.4
+filelock==3.15.4
+fsspec==2024.6.0
+packaging==24.1
+pyyaml==6.0.1
+regex==2024.5.15
+requests==2.32.3
+
+
+# -----------------------------------------------------------------------------
+# 4. Report Templating
+# -----------------------------------------------------------------------------
+
+Jinja2==3.1.4
+MarkupSafe==2.1.5
+
+
+# -----------------------------------------------------------------------------
+# 5. Email Delivery
+# -----------------------------------------------------------------------------
+
+sendgrid==6.11.0
+starkbank-ecdsa==2.2.0
+
+
+# -----------------------------------------------------------------------------
+# 6. Configuration
+# -----------------------------------------------------------------------------
+
+python-dotenv==1.0.1
+
+
+# -----------------------------------------------------------------------------
+# 7. CLI
+# -----------------------------------------------------------------------------
+
+streamlit==1.35.0
+
+
+# -----------------------------------------------------------------------------
+# 8. Testing
+# -----------------------------------------------------------------------------
+
+pytest==8.2.2
+pytest-cov==5.0.0
+iniconfig==2.0.0
+pluggy==1.5.0
+
+
+# -----------------------------------------------------------------------------
+# 9. Utilities
+# -----------------------------------------------------------------------------
+
+certifi==2024.6.2
+charset-normalizer==3.3.2
+idna==3.7
+urllib3==2.2.2
+typing_extensions==4.12.2
+attrs==23.2.0
